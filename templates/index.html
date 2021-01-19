@@ -3,6 +3,8 @@
 	<head>
 		<meta charset="utf-8">
 		<title></title>
+		{% load static %}
+		<link rel="stylesheet" href = "{% static 'main.css' %}">
 	</head>
 	<body>
 		<h1>Working</h1>
@@ -30,6 +32,8 @@
 			<input type = 'text' name = "title">
 		</div>
 		<p><input type = "submit"></p>
-		
+		<button type ="button" onclick="buttonFunc()"></button>
+	
 	</body>
+	<script type "text/javascript" src="{% static 'main.js' %}"></script>
 </html>
