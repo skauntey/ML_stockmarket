@@ -1,0 +1,14 @@
+server {
+
+ listen 80;
+ server_name 18.134.142.194 flowdynamics.io www.flowdynamics.io;
+
+ location = /favicon.ico {access_log off; log_not_found off; }
+
+ location / {
+ include proxy_params;
+
+ proxy_pass http://unix:/home/ubuntu/ML_stockmarket/project_daps.sock;
+
+ }
+}
