@@ -1,0 +1,12 @@
+[Unit]
+Description=gunicorn daemon
+After=network.target
+[Service]
+
+User=eq
+Group=www-data
+WorkingDirectory=/home/ubuntu/ML_stockmarket
+ExecStart=/home/ubuntu/.local/bin/gunicorn --access-logfile - --workers 3 --bind unix:/home/ubuntu/ML_stockmarket/project_daps.sock project_daps.wsgi:application
+
+[Install]
+WantedBy=multi-user.target
