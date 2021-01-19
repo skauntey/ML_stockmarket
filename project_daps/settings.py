@@ -25,7 +25,7 @@ SECRET_KEY = '&@5aymg*8f3_m##s$823cp@(_yrpv74)j2q=lvl3_9wd)_!trx'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['18.134.142.194']
+ALLOWED_HOSTS = ['18.134.142.194', 'flowdynamics.io', 'www.flowdynamics.io']
 
 
 # Application definition
@@ -117,4 +117,6 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
+import os.path
 STATIC_URL = '/static/'
+STATICFILES_DIRS= (os.path.join('static'),)
